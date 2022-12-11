@@ -375,6 +375,26 @@ h1.company-name {
   background-color: #d6c78e;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.gallery img {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery img:nth-child(odd) {
+  display: none;
+}
+
+.footer {
+  padding: 3em 1em;
+  border-top: 1px solid #191919;
+  text-align: center;
+}
+
 @media (min-width: 576px) {
   .info {
     grid-template-areas: "title box" "title box" "title box";
@@ -454,6 +474,28 @@ h1.company-name {
   .plans__item-name {
     margin-top: 0;
     margin-bottom: 0;
+  }
+  .newsletter__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .newsletter__text {
+    margin-bottom: 0;
+  }
+  .newsletter__form {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1em;
+  }
+  .newsletter__form input {
+    margin-bottom: 0;
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery img:nth-child(odd) {
+    display: block;
   }
 }
 @media (min-width: 992px) {
@@ -551,5 +593,8 @@ h1.company-name {
 @media (min-width: 1200px) {
   .header__text p {
     font-size: 2.2rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(8, 1fr);
   }
 }/*# sourceMappingURL=style.css.map */
